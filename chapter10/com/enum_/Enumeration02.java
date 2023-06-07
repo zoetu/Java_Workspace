@@ -1,4 +1,4 @@
-package chapter09.com.enum_;
+package chapter10.com.enum_;
 
 public class Enumeration02 {
     public static void main(String[] args){
