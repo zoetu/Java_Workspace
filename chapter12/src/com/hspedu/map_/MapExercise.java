@@ -8,10 +8,24 @@ public class MapExercise{
         hashMap.put(2,new Emp("zoe",10000,2));
         hashMap.put(3,new Emp("mailan",2000,3));
 
+        // 第一种遍历方式
         Set keyset = hashMap.keySet();
         for(Object key:keyset){
             Emp emp =(Emp)hashMap.get(key);
             System.out.println(emp);
+        }
+        //第二种遍历方式
+        System.out.println("====================");
+        Set entrySet = hashMap.entrySet();
+        Iterator iterator = entrySet.iterator();
+
+        while(iterator.hasNext()){
+            Map.Entry entry = (Map.Entry)iterator.next();
+            Emp emp = (Emp)entry.getValue();
+            
+            if(emp.getSal()>18000){
+                System.out.println(emp);
+            }
         }
     }
 }
